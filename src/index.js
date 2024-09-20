@@ -8,6 +8,9 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { Outlet } from "react-router-dom";
 import { Navbar } from './pages/Navbar';
+import { ArticlePage } from './pages/ArticlePage';
+import { WatchPage } from './pages/WatchPage';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +24,9 @@ root.render(
             {/* /about/contact */}
             <Route path="contact" element={<ContactPage />} />
           </Route>
+          {/* route indicates there'll be an id parameter available to ArticlePage component */}
+          <Route path="/articles/:id" element={<ArticlePage />} />
+          <Route path="/watch" element={<WatchPage />} />
         </Routes>
       </BrowserRouter>
   </React.StrictMode>
